@@ -1,0 +1,18 @@
+<nz-card [nzCover]="coverTemplate" [nzActions]="[actionLearnMore, actionShare]" class="wrapper">
+  <nz-card-meta [nzTitle]="data.title" [nzDescription]="data.description"></nz-card-meta>
+</nz-card>
+<ng-template #coverTemplate>
+  <img class="image" [alt]="data.title" [src]="data.urlToImage || 'https://cptdoraemon.github.io/news-app/xiaoxihome-news.jpg'"/>
+</ng-template>
+<ng-template #actionLearnMore>
+  <button nz-button nzType="primary">
+    <i nz-icon nzType="more" nzTheme="outline"></i>
+    Learn More
+    </button>
+</ng-template>
+<ng-template #actionShare>
+  <button nz-button nzType="default">
+    <i nz-icon nzType="share-alt" nzTheme="outline"></i>
+    Share
+  </button>
+</ng-template>

@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NewsCategoryPageComponent } from './news-category-page.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {NewsDataService} from '../services/news-data.service';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import { NewsCardComponent } from './news-card/news-card.component';
+import {NzButtonModule, NzCardModule, NzIconModule, NzSpinModule} from 'ng-zorro-antd';
 
 
 
 @NgModule({
-  declarations: [NewsCategoryPageComponent],
+  declarations: [NewsCategoryPageComponent, NewsCardComponent],
   exports: [
     NewsCategoryPageComponent
   ],
   imports: [
     CommonModule,
-    MatProgressSpinnerModule,
-    MatCardModule,
-    MatButtonModule
+    NzCardModule,
+    NzSpinModule,
+    NzIconModule,
+    NzButtonModule,
   ],
   providers: [
     NewsDataService

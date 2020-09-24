@@ -1,26 +1,15 @@
 <div class="wrapper">
   <div class="message-wrapper" *ngIf="isLoading">
-    <mat-spinner diameter="45"></mat-spinner>
+    <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
   </div>
   <div class="message-wrapper" *ngIf="errorMessage">
     {{errorMessage}}
   </div>
   <ng-container *ngIf="!isLoading && !errorMessage && data">
-    <mat-card class="card-wrapper" *ngFor="let news of data">
-      <mat-card-header>
-        <mat-card-title>{{news.title}}</mat-card-title>
-        <mat-card-subtitle>{{news.source}}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image class="card-image" [src]="news.urlToImage || 'https://cptdoraemon.github.io/news-app/xiaoxihome-news.jpg'" [alt]="news.title">
-      <mat-card-content>
-        <p>
-          {{news.content}}
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
+    <div class="card-wrapper" *ngFor="let news of data">
+      <app-news-card [data]="news"></app-news-card>
+    </div>
   </ng-container>
 </div>
+
+

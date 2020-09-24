@@ -1,3 +1,5 @@
+@import 'src/theme';
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -12,17 +14,16 @@
   height: 400px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-wrapper {
   width: 100%;
-  height: 400px;
-}
-
-.card-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: @margin-md
 }

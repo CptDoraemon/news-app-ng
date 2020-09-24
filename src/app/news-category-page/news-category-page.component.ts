@@ -5,7 +5,7 @@ import {NewsData, NewsDataService} from '../services/news-data.service';
 @Component({
   selector: 'app-news-category-page',
   templateUrl: './news-category-page.component.html',
-  styleUrls: ['./news-category-page.component.scss']
+  styleUrls: ['./news-category-page.component.less']
 })
 export class NewsCategoryPageComponent implements OnInit {
 
