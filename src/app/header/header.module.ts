@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
-import {MatTabsModule} from '@angular/material/tabs';
 import {RouterModule} from '@angular/router';
 import {NewsDataService} from '../services/news-data.service';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import {NzMenuModule, NzTabsModule} from 'ng-zorro-antd';
 
 
 
@@ -15,9 +14,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   ],
   imports: [
     CommonModule,
-    MatTabsModule,
     RouterModule,
-    MatToolbarModule
+    NzMenuModule,
+    NzTabsModule,
   ],
   providers: [
     NewsDataService

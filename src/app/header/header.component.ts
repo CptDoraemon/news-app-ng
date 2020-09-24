@@ -6,7 +6,7 @@ import {NewsCategory, NewsDataService} from '../services/news-data.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
 
