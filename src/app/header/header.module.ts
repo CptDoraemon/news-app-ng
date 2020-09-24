@@ -4,6 +4,7 @@ import { HeaderComponent } from './header.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {RouterModule} from '@angular/router';
 import {NewsDataService} from '../services/news-data.service';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 
@@ -15,7 +16,8 @@ import {NewsDataService} from '../services/news-data.service';
   imports: [
     CommonModule,
     MatTabsModule,
-    RouterModule
+    RouterModule,
+    MatToolbarModule
   ],
   providers: [
     NewsDataService

@@ -23,7 +23,6 @@ export class HeaderComponent implements OnInit {
       .pipe(filter<RoutesRecognized>(event => event instanceof RoutesRecognized ))
       .subscribe(event => {
         this.category = event.state.root.firstChild.params.category;
-        console.log(this.category);
       });
 
     this.headerTabs = this.newsDataService.getNewsCategories().slice();

@@ -1,8 +1,14 @@
-<nav mat-tab-nav-bar backgroundColor="primary">
-  <a mat-tab-link
-     *ngFor="let tab of headerTabs"
-     [routerLink]="['news', tab]"
-     [active]="tab === category">
-    {{tab | uppercase}}
-  </a>
+<nav>
+  <mat-toolbar color="primary">
+    <span>News Canada</span>
+  </mat-toolbar>
+
+  <div mat-tab-nav-bar mat-align-tabs="center" backgroundColor="primary">
+    <a mat-tab-link
+       *ngFor="let tab of headerTabs"
+       [routerLink]="['news', tab]"
+       [active]="tab === category">
+      {{tab | uppercase}}
+    </a>
+  </div>
 </nav>
